@@ -1,9 +1,9 @@
 import datetime
 
-from pydantic import BaseModel, validator
 from fastapi import HTTPException
+from pydantic import BaseModel, validator
 
-from settings import MIN_QUESTION_NUMS, MAX_QUESTION_NUMS
+from settings import MAX_QUESTION_NUMS, MIN_QUESTION_NUMS
 
 
 class GetQuestion(BaseModel):

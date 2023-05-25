@@ -1,10 +1,10 @@
 from datetime import datetime
 
-from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy import select
+from sqlalchemy.ext.asyncio import AsyncSession
 
-from external_api.quiz_api import get_questions
 from db.models import Quiz
+from external_api.quiz_api import get_questions
 
 
 async def create_new_questions(

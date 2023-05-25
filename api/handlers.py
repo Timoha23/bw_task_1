@@ -1,10 +1,9 @@
-from fastapi import APIRouter, Depends, BackgroundTasks
+from fastapi import APIRouter, BackgroundTasks, Depends
 from sqlalchemy.ext.asyncio import AsyncSession
 
+from api.actions import create_new_questions, get_last_question
 from api.schemas import GetQuestion, QuestionsNum
 from db.session import get_db
-from api.actions import create_new_questions, get_last_question
-
 
 quiz_router = APIRouter()
 

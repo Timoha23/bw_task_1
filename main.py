@@ -1,5 +1,5 @@
-from fastapi import APIRouter, FastAPI
 import uvicorn
+from fastapi import APIRouter, FastAPI
 
 from api.handlers import quiz_router
 

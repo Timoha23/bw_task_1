@@ -1,10 +1,9 @@
 import asyncio
 from typing import Generator
 
-from sqlalchemy import select
-
 import pytest
 from httpx import AsyncClient
+from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession, create_async_engine
 from sqlalchemy.orm import sessionmaker
 
@@ -12,7 +11,6 @@ from db.models import Base, Quiz
 from db.session import get_db
 from main import app
 from settings import TEST_DATABASE_URL
-
 
 engine_test = create_async_engine(TEST_DATABASE_URL)
 
