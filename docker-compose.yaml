@@ -1,0 +1,25 @@
+version: '3.8'
+services:
+  db:
+    container_name: db_1
+    image: postgres:15.0-alpine
+    ports:
+      - 5433:5432
+    restart: always
+    volumes: 
+      - postgres_value:/var/lib/postgresql/data/
+    env_file:
+      - ./.env
+  app:
+    container_name: app_1
+    build: .
+    restart: always
+    ports:
+      - "80:80"
+    env_file:
+      ./.env
+    depends_on:
+      - db
+
+volumes:
+  postgres_value:
